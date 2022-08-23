@@ -1,0 +1,18 @@
+.lista {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    list-style-type: none;
+    margin: 1% 20%;
+}
+
+.lista__item {
+    margin: 5px;
+    height: 100px;
+    width: 100px;
+
+    border: black solid 2px;
+}
+
+.lista__item--ativado {
+    background-color: blue;
+}
