@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Betrayal</title>
+    <style>
+      .button {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        margin: 1px;
+        padding: 0;
+        background-color: #ccc;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .row {
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Betrayal</h1>
+    <div id="grid"></div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io();
+    
+       // Create a 10x10 grid of buttons
+       const gridSize = 10;
+      const grid = document.getElementById("grid");
+      for (let i = 0; i < gridSize; i++) {
+        const row = document.createElement("div");
+        row.className = "row";
+        grid.appendChild(row);
+        for (let j = 0; j < gridSize; j++) {
+          const button = document.createElement("button");
+          button.className = "button";
+          button.dataset.row = i.toString();
+          button.dataset.col = j.toString();
+          row.appendChild(button);
+        }
+      }
+
+
+      const buttons = document.getElementsByClassName("button");
+      console.log(buttons)
+
+      for (let i = 0 ; i< buttons.length ; i++ ){
+
+        buttons[i].addEventListener("click", e => {
+          e.preventDefault();
+          console.log(e.target)
+          console.log(`Button (${e.target.dataset.col},${e.target.dataset.row}) has been clicked`)
+        })
+      } 
+
+      // form.addEventListener('submit', function(e) {
+      //   e.preventDefault();
+      //   if (input.value) {
+      //     socket.emit('chat message', input.value);
+      //     input.value = '';
+      //   }
+      // });
+    
+      // socket.on('chat message', function(msg) {
+      //   var item = document.createElement('li');
+      //   item.textContent = msg;
+      //   messages.appendChild(item);
+      //   window.scrollTo(0, document.body.scrollHeight);
+      // });
+    </script>
+  </body>
+</html>
