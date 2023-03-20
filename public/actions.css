@@ -1,0 +1,27 @@
+.ready-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.ready-button:hover {
+  background-color: #3e8e41;
+}
+
+.ready-button:active {
+  background-color: #297d38;
+  box-shadow: 0 5px #666;
+}
+
+.ready-button:disabled {
+  background-color: #d3d3d3;
+  color: #aaaaaa;
+  cursor: default;
+}

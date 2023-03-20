@@ -1,0 +1,86 @@
+#play-area {
+  display: flex;
+  max-height: fit-content;
+}
+
+/* Left side of the interface */
+
+.button {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 1px;
+  padding: 0;
+  background-color: #ccc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+.button-tile {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #ff0000;
+  /* Replace with your desired solid color */
+  transform: scale(0);
+  transition: transform 0.3s ease;
+  pointer-events: none;
+  /* Make the text non-clickable */
+  z-index: 1;
+  /* Ensure text is above the button background */
+}
+
+.button-square.active {
+  transform: scale(1);
+}
+
+.row {
+  white-space: nowrap;
+}
+
+#players {
+  width: 30%;
+  float: right;
+}
+
+/* Player list */
+
+#players {
+  width: 50%;
+  height: fit-content;
+  background-color: white;
+  float: right;
+  overflow-y: scroll;
+  padding: 20px;
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.player .name {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.player .color {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.player-health,
+.player-energy,
+.player-range {
+  margin-right: 10px;
+
+  max-width: 5em;
+  word-wrap: break-word;
+}

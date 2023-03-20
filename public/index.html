@@ -2,6 +2,9 @@
 <html>
   <head>
     <title>Betrayal</title>
+    <link rel="stylesheet" href="/form.css" />
+    <link rel="stylesheet" href="/board.css" />
+    <link rel="stylesheet" href="/actions.css" />
     <link rel="stylesheet" href="/styles.css" />
     <style>
       
@@ -9,9 +12,29 @@
   </head>
   <body>
     <h1>Betrayal</h1>
-    <div id="grid"></div>
+    
+    <form>
+      <label>
+        Name:
+        <input type="text" name="name" required>
+      </label>
+      <label>
+        Color:
+        <input type="color" name="color" value="#000000">
+      </label>
+      <button id="join-btn">Join</button>
+    </form>
+    
+    <div id="play-area">
+      <div id="grid"></div>
+      <ul id="players"></ul>
+    </div>
+
+    <button class="ready-button">Ready</button>
 
     <script src="/socket.io/socket.io.js"></script>
-    <script src="/script.js"></script>
+    <script src="/input.js"></script>
+    <script src="/main.js"></script>
+
   </body>
 </html>
