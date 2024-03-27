@@ -4,8 +4,8 @@ const Creature = require('../Creature');
 
 class Game {
   constructor() {
-    this.mapSizeX = 10;
-    this.mapSizeY = 10;
+    this.mapSizeX = 20;
+    this.mapSizeY = 20;
     this.players = [];
   }
 

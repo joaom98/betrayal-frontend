@@ -55,7 +55,7 @@ class Creature {
       && this.coordinate.equals(creature.coordinate));
   }
 
-  gainEnergy(quantity = 1, cap = 10) {
+  gainEnergy(quantity = 1, cap = 5) {
     if (this.energy < cap) {
       this.energy += quantity;
     }

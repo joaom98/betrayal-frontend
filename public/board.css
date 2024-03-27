@@ -80,6 +80,7 @@
 .player-energy,
 .player-range {
   margin-right: 10px;
+  text-shadow: 2px 2px 2px white;
 
   max-width: 5em;
   word-wrap: break-word;

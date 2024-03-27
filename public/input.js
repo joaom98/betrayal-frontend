@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
-const socket = io('http://localhost:3000');
+const port = process.env.PORT; // fix this in the future. Get the port from the deploy server
+const socket = io(':10000');
 
 function joinButton() {
   const startBtn = document.getElementById('join-btn');
