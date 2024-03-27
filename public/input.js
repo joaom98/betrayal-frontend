@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-const port = process.env.PORT; // fix this in the future. Get the port from the deploy server
+// const port = process.env.PORT; // fix this in the future. Get the port from the deploy server
 const socket = io(':10000');
 
 function joinButton() {
